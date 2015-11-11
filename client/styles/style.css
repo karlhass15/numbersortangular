@@ -1,0 +1,13 @@
+.sorts {
+    border: solid #429d22 1px;
+    margin: 5px 5px 5px 5px;
+}
+.name {
+    border-radius: 2px;
+}
+.location {
+    border-radius: 2px;
+}
+.number {
+    border-radius: 2px;
+}
