@@ -1,4 +1,4 @@
-var myApp = angular.module("myApp", []);
+var myApp = angular.module("myApp", ['ngMaterial', 'ngAnimate', 'ngAria']);
 
 myApp.controller('NumberController', ["$scope", '$http', '$filter', function($scope, $http, $filter){
     $scope.info = {};
@@ -11,7 +11,6 @@ myApp.controller('NumberController', ["$scope", '$http', '$filter', function($sc
         //GET
         $scope.getPeople = function(){
             $http.get('/people').then(function(response){
-                //?????.data
                 $scope.zetaArray = response.data;
             });
 
@@ -23,7 +22,13 @@ myApp.controller('NumberController', ["$scope", '$http', '$filter', function($sc
 
         $scope.getPeople();
 
+    $scope.info.message = "Click here for fun";
+    $scope.changeMessage = function() {
+        $scope.info.message = "Just kidding you're in bootcamp Hell";
+
+    };
+
+
+
     }]);
-
-
 

@@ -7,28 +7,42 @@
     <!--STYLES-->
     <link rel="stylesheet" href="/vendors/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/styles/style.css">
+    <link rel="stylesheet" href="/vendors/angular-material.min.css">
+
+
 
 
     <!--SCRIPTS-->
     <script type="text/javascript" src="/vendors/angular.min.js"></script>
     <script type="text/javascript" src="/assets/scripts/app.min.js"></script>
+    <script type="text/javascript" src="/vendors/angular-animate.min.js"></script>
+    <script type="text/javascript" src="/vendors/angular-aria.min.js"></script>
+    <script type="text/javascript" src="/vendors/angular-material.min.js"></script>
+
 
 </head>
 <body>
 <div class="container">
 
-<h1>Zeta Numbers</h1>
+
+
+    <h1>ZETA NUMBERS</h1>
 <div ng-controller="NumberController">
 
-   <div class="sorts">
-       <h2>Sort By</h2>
-    <button ng-click="reverse=false;order('name', false)">By Name</button>
-    <button ng-click="reverse=false;order('location', false)">By Location</button>
-    <button ng-click="reverse=false;order('name', false)">By Number</button>
+    <div id="fun">
+    <p>{{info.message}} </p>
+    <button ng-click="changeMessage()">Click Me</button>
+</div>
+
+    <div class="sorts">
+       <h3>SORT BY</h3>
+    <md-button class="name" ng-click="reverse=false;order('name', false)">By Name</md-button>
+    <md-button class='location' ng-click="reverse=false;order('location', false)">By Location</md-button>
+    <md-button class='number' ng-click="reverse=false;order('name', false)">By Number</md-button>
    </div>
 
     <div ng-repeat="student in zetaArray">
-        <zeta-info info="student"></zeta-info>
+        <zeta-info class= "studentBox" info="student"></zeta-info>
     </div>
 
 </div>
